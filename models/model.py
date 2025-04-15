@@ -89,10 +89,3 @@ class TransformerNet(nn.Module):
         y = self.conv_out(y)
         y = torch.tanh(y)
         return y
-
-if __name__ == '__main__':
-    net = TransformerNet()
-    print(net)
-    x = torch.rand(1, 3, 256, 256)
-    y = net(x)
-    print("Output shape:", y.shape)
